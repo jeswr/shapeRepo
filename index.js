@@ -1,7 +1,7 @@
 const serve = require('rdf-serve');
 const path = require('path');
 
-serve.default(path.join(__dirname, 'public'))
+serve.default(path.join(__dirname, 'shapes'))
 
 
 // const express = require('express');
