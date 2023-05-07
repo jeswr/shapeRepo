@@ -1,12 +1,13 @@
-// Add Express
-const express = require("express");
-// Initialize Express
+const express = require('express');
 const app = express();
-// Create GET request
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
-// Initialize server
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});
+const path = require('path');
+
+app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+})
+
+app.listen(process.env.PORT || 3000);
+
+module.exports = app;
