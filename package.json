@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node test/integration.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "rdf-serve": "^1.0.6"
+  },
+  "devDependencies": {
+    "n3": "^1.16.4"
   }
 }
