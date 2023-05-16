@@ -11,9 +11,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "rdf-serve": "^1.0.6"
+    "rdf-serve": "^1.0.6",
+    "simple-git": "^3.18.0"
   },
   "devDependencies": {
-    "n3": "^1.16.4"
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "n3": "^1.16.4",
+    "semantic-release": "^21.0.2"
   }
 }
