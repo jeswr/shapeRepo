@@ -13,14 +13,18 @@
   "license": "MIT",
   "dependencies": {
     "rdf-serve": "^1.0.6",
+    "shacl-engine": "^0.1.0",
     "simple-git": "^3.18.0"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@types/fs-extra": "^11.0.1",
+    "@types/n3": "^1.10.4",
     "fs-extra": "^11.1.1",
     "n3": "^1.16.4",
     "semantic-release": "^21.0.2",
+    "shaclc-parse": "^1.4.0",
+    "shaclc-write": "^1.4.2",
     "ts-node": "^10.9.1"
   }
 }

@@ -84,62 +84,6 @@ async function main() {
   }
 
   writeJSONSync(VERSION_ROOT, versionConfigs, { spaces: 2 });
-
-
-  // const version = await readJSONSync(VERSION_ROOT);
-  // console.log(version);
-
-
-  // const analysis = await nextVersion({
-  //   file: 'example',
-  //   commit: 'f6e65f3008a9a0832ecbab6bbc6fd48d1b48220b',
-  //   version: '1.4.3'
-  // });
-  
-  // if (typeof analysis === 'string') {
-  //   for (const dir of [
-  //     ...Array(3).fill(0).map((_, i) => [ ...analysis.split('.').slice(0, i), 'latest' ]),
-  //     analysis.split('.')
-  //   ]) {
-  //     mkdirSync(path.join(DIST_ROOT, ...dir), { recursive: true });
-  //     copyFileSync(
-  //       path.join(SHAPE_ROOT, 'example.shaclc'),
-  //       path.join(DIST_ROOT, ...dir, 'example.shaclc'));
-  //   } 
-  // }
-
-
-
-  // if (!fs.existsSync(path.join(__dirname, 'dist'))) {
-  //   fs.mkdirSync(path.join(__dirname, 'dist'));
-  // }
-
-  // if (analysis) {
-  //   fs.writeFileSync(
-  //     path.join(__dirname, 'dist', ...analysis.split('.'), 'example.shaclc'),
-  //     fs.readFileSync(path.join(__dirname, 'shapes', 'example.shaclc')),
-  //     {
-        
-  //     }
-  //   );
-  // }
-
-  // console.log(analysis)
 }
 
 main();
-
-// f6e65f3008a9a0832ecbab6bbc6fd48d1b48220b
-
-// const l = git.log({
-//   file: path.join(__dirname, 'shapes', 'example.shaclc'),
-// }, console.log)
-
-// console.log(l)
-
-// console.log(
-//   analyzeCommits({}, {
-//     commits: [],
-//     cwd: process.cwd(),
-//   })
-// )

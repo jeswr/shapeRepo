@@ -3,10 +3,5 @@
     "version": "0.4.0",
     "commit": "b1918ccfed12d831bc4e7b415becb5a70fb048da",
     "file": "example"
-  },
-  {
-    "file": "example1",
-    "version": "0.0.0",
-    "commit": "b1918ccfed12d831bc4e7b415becb5a70fb048da"
   }
 ]
