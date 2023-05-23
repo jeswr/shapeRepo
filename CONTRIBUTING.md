@@ -11,6 +11,7 @@ We recommend the following practises to make your shape work with as many applic
  - Shapes should only have constraint violations. [`sh:Info` and `sh:Warning` severities](https://www.w3.org/TR/shacl/#severity) should not be used.
  - [SPARQL-based constraints](https://www.w3.org/TR/shacl/#sparql-constraints) should not be used.
  - [SHACL Advanced Features](https://www.w3.org/TR/shacl-af/) should not be used.
+ - Extend and re-use shapes within the same shape repository wherever possible. This can be achieved using [`sh:property`](https://www.w3.org/TR/shacl/#PropertyConstraintComponent) and [`sh:node`](https://www.w3.org/TR/shacl/#NodeConstraintComponent).
 
  **Testing**
 
