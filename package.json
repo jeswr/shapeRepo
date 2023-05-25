@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node test/integration.js"
+    "test": "node test/integration.js",
+    "release": "ts-node scripts/release.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,12 @@
     "rdf-serve": "^1.1.0"
   },
   "devDependencies": {
-    "n3": "^1.16.4"
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.5",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@types/fs-extra": "^11.0.1",
+    "@types/n3": "^1.10.4",
+    "n3": "^1.16.4",
+    "simple-git": "^3.19.0",
+    "ts-node": "^10.9.1"
   }
 }
