@@ -1,0 +1,19 @@
+{
+  "branches": [
+    "main"
+  ],
+  "verifyConditions": [
+    "@qiwi/semantic-release-gh-pages-plugin"
+  ],
+  "publish": [
+    [
+      "@qiwi/semantic-release-gh-pages-plugin",
+      {
+        "msg": "add version <%= nextRelease.gitTag %>",
+        "branch": "pages",
+        "add": true,
+        "src": "dist"
+      }
+    ]
+  ]
+}
