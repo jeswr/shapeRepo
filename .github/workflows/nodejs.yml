@@ -37,6 +37,7 @@ jobs:
         with:
           node-version: 20.x
       - run: npm ci
+      - run: npm run release
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
