@@ -8,6 +8,13 @@
     "test": "node test/integration.js",
     "release": "ts-node scripts/release.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeswr/shapeRepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeswr/shapeRepo/issues"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
