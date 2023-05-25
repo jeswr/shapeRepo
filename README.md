@@ -1,4 +1,4 @@
-<img src="./shaperepologo.svg" width="40px"> Solid Shape Repo
+<img src="./images/logo.svg" width="40px"> Solid Shape Repo
 
 This is a repository for storing and sharing solid shapes. This is designed to be a collaborative project similar to [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/).
 
@@ -13,4 +13,3 @@ New shapes can be contributed via a pull request. See [CONTRIBUTING.md](./CONTRI
 ©2023–present
 [Jesse Wright](https://github.com/jeswr),
 [MIT License](https://github.com/jeswr/useState/blob/master/LICENSE).
-
