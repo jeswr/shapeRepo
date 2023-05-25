@@ -30,5 +30,24 @@
     "n3": "^1.16.4",
     "simple-git": "^3.19.0",
     "ts-node": "^10.9.1"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "verifyConditions": [
+      "@qiwi/semantic-release-gh-pages-plugin"
+    ],
+    "publish": [
+      [
+        "@qiwi/semantic-release-gh-pages-plugin",
+        {
+          "msg": "add version <%= nextRelease.gitTag %>",
+          "branch": "pages",
+          "add": true,
+          "src": "dist"
+        }
+      ]
+    ]
   }
 }
