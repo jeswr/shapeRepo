@@ -3,10 +3,13 @@ import { analyzeCommits } from '@semantic-release/commit-analyzer';
 import { DefaultLogFields, simpleGit } from 'simple-git';
 import path from 'path';
 import { copyFileSync, mkdirSync, readJSONSync, writeJSONSync, readdirSync } from 'fs-extra';
+import { fetch } from 'cross-fetch';
 
 const SHAPE_ROOT = path.join(__dirname, '..', 'shapes');
 const DIST_ROOT = path.join(__dirname, '..', 'dist');
-const VERSION_ROOT = path.join(__dirname, '..', 'versions.json');
+const VERSION_ROOT = path.join(__dirname, '..', 'dist', 'versions.json');
+const VERSION_URL = 'https://raw.githubusercontent.com/jeswr/shapeRepo/pages/versions.json';
+
 const git = simpleGit(__dirname);
 
 function gitLog(config: { file?: string; from?: string; maxCount?: number; }): Promise<readonly DefaultLogFields[]> {
@@ -60,7 +63,8 @@ async function updateVersion(versionConfig: VersionInfo, newVersionNumber: strin
 }
 
 async function main() {
-  const versionConfigs: VersionInfo[] = await readJSONSync(VERSION_ROOT);
+  // const versionConfigs: VersionInfo[] = await readJSONSync(VERSION_ROOT);
+  const versionConfigs: VersionInfo[] = await (await fetch(VERSION_URL)).json();
   const files = new Set<string>(readdirSync(SHAPE_ROOT).map((f) => f.replace(/\.shc$/, '')));
   
   for (const versionConfig of versionConfigs) {
